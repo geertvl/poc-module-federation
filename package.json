@@ -1,0 +1,14 @@
+{
+  "name": "poc-module-federation",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n shell,orders,inventory -c blue,magenta,cyan \"npm run dev --workspace=packages/module-orders\" \"npm run dev --workspace=packages/module-inventory\" \"npm run dev --workspace=packages/shell\"",
+    "install:all": "npm install"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}

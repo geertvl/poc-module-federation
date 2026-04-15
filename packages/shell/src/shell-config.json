@@ -1,0 +1,25 @@
+{
+  "modules": [
+    {
+      "id": "orders",
+      "scope": "orders",
+      "remoteUrl": "http://localhost:3001/remoteEntry.js"
+    },
+    {
+      "id": "inventory",
+      "scope": "inventory",
+      "remoteUrl": "http://localhost:3002/remoteEntry.js",
+      "lazy": true,
+      "basePath": "/inventory",
+      "navigationItems": [
+        {
+          "id": "inventory",
+          "label": "Inventory",
+          "icon": "Package",
+          "path": "/inventory",
+          "order": 20
+        }
+      ]
+    }
+  ]
+}
